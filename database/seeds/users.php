@@ -12,11 +12,11 @@ class users extends Seeder
     public function run()
     {
        
-        $faker= Faker\Factory::create('ar_SA');
+        $faker= Faker\Factory::create();
         $data=[];
         DB::table('users')->truncate();
 
-        for($i=1; $i <=100; $i++){
+        for($i=1; $i <=10; $i++){
             array_push($data,[
                 'name'=> $faker->name,
                 'email'=>$faker->email,
